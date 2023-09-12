@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+.all{
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  width: 49vw;
+}
+.title {
+  background-color: #bbbbbb;
+  padding: 1vw;
+}
+.game-container, .comptMove {
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Rock, .Paper, .Scissors, .computer {
+  box-shadow: inset 17px 17px 53px #222222,
+             -17px -17px 53px #424242;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 60%;
+  background-color: #1d1d1d;
+  width: 25%; 
+  height: 10vw;
+  border-radius: 200px;
+  border: 5px solid white;
+  cursor: pointer;
+  animation: 1s;
+  &:hover {
+  transition: 1s;
+  }
+}
+.active, .active:hover{
+  background-color: #26d43d !important;
+}
+.Rock {
+  background-image: url(icons/hand-fist.svg);
+
+  &:hover {
+    background-color: #bbbbbb;
+    background-image: url('icons/hand-fist-black.svg');
+  }
+}
+
+.Paper {
+  background-image: url(icons/hand-paper.svg);
+
+  &:hover {
+    background-color: #bbbbbb;
+    background-image: url('icons/hand-paper-black.svg');
+  }
+}
+
+.Scissors {
+  background-image: url(icons/hand-scissors.svg);
+
+  &:hover {
+    background-color: #bbbbbb;
+    background-image: url('icons/hand-scissors-black.svg');
+  }
+}
+.computer{
+  animation: 0.5s 5 linear;
+}
+@keyframes scale {
+  50% {
+    background-size: 80%;
+  }
+
+  90% {
+    background-size: 20%;
+    
+  }
+}
+@keyframes bg {
+  30%{ background-image: url(icons/hand-fist.svg)}
+  60%{background-image: url(icons/hand-paper.svg)}
+  90%{background-image: url(icons/hand-scissors.svg)}
+}
