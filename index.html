@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <div id="scoreBoard">Le Score est encore NUL</div>
     <div class="overlay"></div>
     <div class="all">
       <div class="container">
@@ -20,6 +21,12 @@
           <div class="Rock btn"></div>
           <div class="Paper btn"></div>
           <div class="Scissors btn"></div>
+        </div>
+        <div class="btns">
+          <button id="result" onclick="showScore()">VIEW
+            SCORE</button>
+          <button id="reset" onclick="reset()">RESET
+            SCORE</button>
         </div>
       </div>
       <div class="container">
